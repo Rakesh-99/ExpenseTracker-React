@@ -1,0 +1,20 @@
+import "./DateExpense.css";
+
+
+const DateExpense = (props)=> {
+
+        const month = props.date.toLocaleString('en-US', { month: 'long' });
+        const year = props.date.getFullYear();
+        const day = props.date.toLocaleString('en-US', { day: "2-digit" });
+        
+    
+    return (
+      <div className="dateBox">
+        <div>{ month }</div>
+        <div>{ year }</div>
+        <div>{ day }</div>
+      </div>
+    );
+};
+
+export default DateExpense;
